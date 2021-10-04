@@ -12,8 +12,8 @@ pool:
 
 steps:
   - task: DownloadSecureFile@1
-  inputs:
-    secureFile: 'pluginkey.key'
-- task: CmdLine@2
-  inputs:
-    script: './bundle-plugin.py -u $(Username) -p $(Password) -i $(Instance) -k pluginkey.key'
+    inputs:
+      secureFile: 'pluginkey.key'
+  - task: CmdLine@2
+    inputs:
+      script: './bundle-plugin.py -u $(Username) -p $(Password) -i $(Instance) -k pluginkey.key'
