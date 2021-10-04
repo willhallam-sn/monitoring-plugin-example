@@ -27,6 +27,9 @@ bundleDir='./bundle'
 # required metadata keys
 requiredKeys=['pluginName','dirs']
 
+# optional metadata keys
+optionalKeys=['os','platform']
+
 # target table for attachment
 targetTable='sn_agent_asset'
 
@@ -131,6 +134,11 @@ b64Attachment=base64.b64encode(attachment)
 strAttachment=str(b64Attachment)
 
 requestJson={'name':metaDataJson['pluginName'],'attachment':strAttachment[1:]}
+
+# add optional keys if any exist
+for optKey in optionalKeys:
+    if optKey in metaDataJson:
+        requestJson[optKey]=metaDataJson[optKey]
 
 # Do the HTTP request
 response = requests.post(url, auth=(user, pwd), headers=headers,json=requestJson)
