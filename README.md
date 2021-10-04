@@ -12,3 +12,6 @@ This directory contains the scripts/executables which constitute your plugin.
 
 ## allow_list - allow list directory
 This directory contains the check-allow-list.json file which controls what plugins can be execute (optionally with what arguments are allowed).
+
+## bundle-plugin.py
+This script performs the commands required to bundle and sign the content for use by the Agent Client Collector, then uploads the new bundle to your ServiceNow instance, creating/updating the corresponding ACC Plugin record as applicable.  It relies on a scoped app named "pluggy" which instantiates a purpose-built REST API endpoint.
