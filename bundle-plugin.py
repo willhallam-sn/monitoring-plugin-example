@@ -21,9 +21,6 @@ sigFile='sign.txt.sha256'
 # base64 signature file
 b64SigFile='sign.txt.sha256_encode64.sig'
 
-# signing key file
-signingKeyFile='/home/whallam/plugin-stuff/pluginkey.key'
-
 # bundle subdir
 bundleDir='./bundle'
 
@@ -36,19 +33,21 @@ targetTable='sn_agent_asset'
 # initialize logging
 logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
 
-parser = argparse.ArgumentParser(usage='bundle-plugin.py --user user [--password <password>] --instance myinstance.service-now.com')
+parser = argparse.ArgumentParser(usage='bundle-plugin.py --user user [--password <password>] --instance myinstance.service-now.com --keyfile keyfile.key')
 parser.add_argument('-u','--user',dest='user')
 parser.add_argument('-p','--password',dest='pwd')
+parser.add_argument('-k','--keyfile',dest='keyfile')
 parser.add_argument('-i','--instance',dest='instance') # e.g. "myinstance.service-now.com"
 
 args = parser.parse_args()
 
-if not args.user or not args.instance:
+if not args.user or not args.instance or not args.keyfile:
     parser.print_help()
     sys.exit(1) 
 
 # Set the request parameters
 url = 'https://'+args.instance+'/api/x_snc_pluggy/pluggy/plugin'
+signingKeyFile=args.keyfile
 
 # user from args
 user=args.user
