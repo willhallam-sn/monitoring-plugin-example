@@ -1,0 +1,7 @@
+{
+    "pluginName":"monitoring-plugin-hallam",
+    "dirs": [
+        "bin",
+        "allow_list"
+    ]
+}
