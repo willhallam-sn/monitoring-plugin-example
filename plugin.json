@@ -4,6 +4,6 @@
         "bin",
         "allow_list"
     ],
-    "os" : "all",
+    "os" : "linux",
     "platform" : "all"
 }

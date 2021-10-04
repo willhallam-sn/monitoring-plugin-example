@@ -1,7 +1,7 @@
-'''An example repo for maintaining ACC plugins'''
+#An example repo for maintaining ACC plugins
 
-=== plugin.json - configure plugin metadata ===
-==== Keys (\*=required) ====
+## plugin.json - configure plugin metadata 
+### Keys (\*=required) 
 \*pluginName - name to assign; best practice would be to match the git repo name, e.g. "monitoring-plugin-awscloud"
 \*dirs - directories to include in archive -- minimally "bin" and "allow_list"
 os - OS to receive the plugin; default choices are "all", "windows", "linux", "darwin" (MacOS)
