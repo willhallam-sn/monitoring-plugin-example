@@ -36,7 +36,7 @@ targetTable='sn_agent_asset'
 # initialize logging
 logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
 
-parser = argparse.ArgumentParser(usage='bundle-plugin.py --user user --instance myinstance.service-now.com')
+parser = argparse.ArgumentParser(usage='bundle-plugin.py --user user [--password <password>] --instance myinstance.service-now.com')
 parser.add_argument('-u','--user',dest='user')
 parser.add_argument('-p','--password',dest='pwd')
 parser.add_argument('-i','--instance',dest='instance') # e.g. "myinstance.service-now.com"
