@@ -1,5 +1,5 @@
 {
-    "pluginName":"monitoring-plugin-hallam",
+    "pluginName":"monitoring-plugin-example",
     "dirs": [
         "bin",
         "allow_list"

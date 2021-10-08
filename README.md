@@ -1,5 +1,7 @@
 #An example repo for maintaining ACC plugins
 
+#Disclaimer: the contents of this repository are unsupported and come with no express or implied warranty.
+
 ## plugin.json - configure plugin metadata 
 ### Keys (\*=required) 
 - \*pluginName - name to assign; best practice would be to match the git repo name, e.g. "monitoring-plugin-awscloud"
