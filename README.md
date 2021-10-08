@@ -1,6 +1,6 @@
-#An example repo for maintaining ACC plugins
+# An example repo for maintaining ACC plugins
 
-#Disclaimer: the contents of this repository are unsupported and come with no express or implied warranty.
+# Disclaimer: the contents of this repository are unsupported and come with no express or implied warranty.
 
 ## plugin.json - configure plugin metadata 
 ### Keys (\*=required) 
