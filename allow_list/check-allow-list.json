@@ -13,4 +13,18 @@
     "exec":"check_aws_events.py",
     "skip_arguments":true
   }
+  {  
+    "args":[    
+      ""
+    ],
+    "exec":"check-aws-vpn.py",
+    "skip_arguments":true
+  }
+  {  
+    "args":[    
+      ""
+    ],
+    "exec":"nagios-check-aws-ec2-backup",
+    "skip_arguments":true
+  }
 ]
